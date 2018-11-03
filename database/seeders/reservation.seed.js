@@ -16,7 +16,7 @@ const seed = () => {
       provider_name:              'AVIANCA',
       crm_id:                     'CRM' + i,
       reservation_channel:        (i <= 7) ? 'Directo Sabre' : ((i > 8 && i < 15) ? 'Directo Amadeus' : 'Plataforma Palito'),
-      total:                      i * 45.9,
+      total:                      (i * 45.9).toFixed(2),
       reservation_date:           new Date(2018, i, (i * 2)),
       status:                     'Booked',
       client_id:                  i <= 10 ? AUTH0_USER_ID : AUTH0_USER_ID2,
